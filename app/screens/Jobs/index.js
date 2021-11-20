@@ -20,11 +20,13 @@ export default function index() {
         }}>
         <CustomInput
           placeholder="Buscar empleos"
+          
           IconLeft={() => (
             <View style={{paddingRight:scale(10)}}>
               <MaterialIcons name="search" size={scale(22)}  color={appColors.gray} /> 
             </View>
           )}
+          noShadow
           containerStyle={{flex: 0.96,backgroundColor:appColors.bgLight}}
         />
         <Pressable style={{ alignItems: 'center', justifyContent:'center',backgroundColor:appColors.bgLight, padding:scale(10), borderRadius:scale(12)}}>
