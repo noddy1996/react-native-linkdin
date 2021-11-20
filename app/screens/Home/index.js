@@ -30,27 +30,27 @@ export default function Home() {
   useEffect(() => {
     setIsError(error)
   }, [error])
-  const _renderItems=()=>{
-    return(
+  const _renderItems = () => {
+    return (
       <PostCard>
-      <View>
-        <Label text={starterIntro[0]} style={styles.postDescription}/>
-        <Image source={require("../../assets/images/card.png")}  style={styles.postImage}/>
-      </View>
+        <View>
+          <Label text={starterIntro[0]} style={styles.postDescription} />
+          <Image source={require("../../assets/images/card.png")} style={styles.postImage} />
+        </View>
       </PostCard>
     )
   }
   return (
     <Container >
-     
-    <FlatList
-    showsVerticalScrollIndicator={false}
-    ListHeaderComponent={()=><Stories/>}
-    data={[1,2,3]}
-    renderItem={_renderItems}
-    keyExtractor={(item,index)=>"key"+index}
-    />
-    <FabIcon/>
+
+      <FlatList
+        showsVerticalScrollIndicator={false}
+        ListHeaderComponent={() => <Stories />}
+        data={[1, 2, 3]}
+        renderItem={_renderItems}
+        keyExtractor={(item, index) => "key" + index}
+      />
+      <FabIcon />
     </Container>
   )
 }
@@ -60,10 +60,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
   },
-  postImage:{
-    height:scale(150),
-    borderRadius:scale(20),
-    marginVertical:scale(15)
+  postImage: {
+    height: scale(150),
+    borderRadius: scale(20),
+    marginVertical: scale(15)
   },
   header: {
     backgroundColor: appColors.primary,
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20
   },
-postDescription:{
-  marginTop:scale(10)
-}
+  postDescription: {
+    marginTop: scale(10)
+  }
 });

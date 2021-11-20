@@ -7,7 +7,7 @@ import TouchableRipple from 'react-native-touch-ripple'
 export default function index({label,style,onPress,labelStyle}) {
     return (
         <TouchableRipple rippleColor={appColors.white} onPress={onPress} rippleDuration={800} style={[styles.container,style]}>
-            <Text style={[styles.label,labelStyle]}>{`${label}`.toUpperCase()}</Text>
+            <Text style={[styles.label,labelStyle]}>{`${label}`}</Text>
         </TouchableRipple>
     )
 }
