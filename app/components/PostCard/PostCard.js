@@ -3,10 +3,11 @@ import { StyleSheet, Text, View } from 'react-native'
 import PostCardFooter from './PostCardFooter'
 import PostCardHeader from './PostCardHeader'
 
-export default function PostCard() {
+export default function PostCard({children}) {
     return (
         <View>
             <PostCardHeader/>
+            {children}
             <PostCardFooter/>
         </View>
     )

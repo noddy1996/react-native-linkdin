@@ -5,7 +5,7 @@ import { appColors } from '../../utils/appColors'
 
 export default function Label({text,style}) {
     return (
-    <Text style={[styles.label,style]}>{text}</Text>
+    <Text  style={[styles.label,style]}>{text}</Text>
     )
 }
 
@@ -13,6 +13,6 @@ const styles = StyleSheet.create({
     label:{
         fontSize:scale(14),
         color:appColors.Text,
-        fontFamily:"FontsFree-Net-Konnect2"
+        fontFamily:"FontsFree-Net-Konnect2",
     }
 })
