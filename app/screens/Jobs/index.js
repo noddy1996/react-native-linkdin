@@ -8,6 +8,7 @@ import MaterialIcons from 'react-native-vector-icons/dist/MaterialIcons';
 import { appColors } from '../../utils/appColors';
 
 import CenterCard from './CenterCard';
+import RecCard from '../../components/RecCard/RecCard';
 export default function index() {
   return (
     <Container>
@@ -41,7 +42,9 @@ export default function index() {
           renderItem={({item, index}) => <Tag key={index} label={item} />}
         />
       </View>
+      <RecCard/>
       <CenterCard />
+      <RecCard/>
     </Container>
   );
 }

@@ -16,7 +16,8 @@ export default function RecCard({}) {
 
 const styles = StyleSheet.create({
     container:{
-        paddingHorizontal:scale(20)
+        paddingHorizontal:scale(20),
+        marginVertical:scale(20)
     },
     desc:{
         marginLeft:scale(50),
