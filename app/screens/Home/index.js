@@ -5,13 +5,11 @@ import { setError } from '../../redux/actions';
 import { } from 'react-native-gesture-handler';
 import { features, starterIntro } from '../../utils/MockData';
 import { AlertHelper } from '../../utils/AlertHelper';
-import { appColors } from '../../utils/appColors';
-import CustomInput from '../../components/CustomInput';
+import { appColors } from '../../utils/appColors'; 
 import Label from '../../components/Label';
-import CustomButton from '../../components/CustomButton';
-import FontAwesome from 'react-native-vector-icons/dist/FontAwesome';
 import Divider from '../../components/Divider';
-import Modal from 'Components/Modal';
+import Tabs from '../../components/Tabs';
+
 import { scale } from 'react-native-size-matters';
 import Container from '../../components/Container';
 import Stories from '../../components/Stories';
@@ -33,6 +31,7 @@ export default function Home() {
   const _renderItems = () => {
     return (
       <PostCard>
+        
         <View>
           <Label text={starterIntro[0]} style={styles.postDescription} />
           <Image source={require("../../assets/images/card.png")} style={styles.postImage} />
@@ -45,7 +44,13 @@ export default function Home() {
 
       <FlatList
         showsVerticalScrollIndicator={false}
-        ListHeaderComponent={() => <Stories />}
+        ListHeaderComponent={() => <>
+        <Stories />
+        <Label text={"Noticias"}  style={{fontSize:scale(22), fontWeight:"800"}} />
+        
+    <Tabs />
+    <Divider  isDark/>
+         </>}
         data={[1, 2, 3]}
         renderItem={_renderItems}
         keyExtractor={(item, index) => "key" + index}

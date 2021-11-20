@@ -6,7 +6,7 @@ import CustomInput from 'Components/CustomInput';
 import {scale} from 'react-native-size-matters';
 import MaterialIcons from 'react-native-vector-icons/dist/MaterialIcons';
 import { appColors } from '../../utils/appColors';
-
+ 
 import CenterCard from './CenterCard';
 import RecCard from '../../components/RecCard/RecCard';
 export default function index() {
