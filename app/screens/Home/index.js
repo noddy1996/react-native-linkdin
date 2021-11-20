@@ -13,6 +13,8 @@ import FontAwesome from 'react-native-vector-icons/dist/FontAwesome';
 import Divider from '../../components/Divider';
 import Modal from 'Components/Modal';
 import { scale } from 'react-native-size-matters';
+import Stories from 'Components/Stories';
+ 
 export default function Home() {
     const [isError, setIsError] = useState({})
     const [text, setText] = useState("hello")
@@ -32,6 +34,7 @@ export default function Home() {
             <Label style={styles.headerText}
             text={"React native starter kit with redux By `Amusoftech`"}/>
         </View>
+        <Stories />
         <ScrollView style={styles.scrollContainer}>
           
           <Label text={"What is React Native Starter?"} style={styles.TitleText}/>
