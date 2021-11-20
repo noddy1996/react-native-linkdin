@@ -2,11 +2,12 @@ import React from 'react';
 import {View, Text, Pressable, FlatList} from 'react-native';
 import Container from 'Components/Container';
 import Tag from 'Components/Tags';
-import Label from 'Components/Label';
 import CustomInput from 'Components/CustomInput';
 import {scale} from 'react-native-size-matters';
 import MaterialIcons from 'react-native-vector-icons/dist/MaterialIcons';
 import { appColors } from '../../utils/appColors';
+
+import CenterCard from './CenterCard';
 export default function index() {
   return (
     <Container>
@@ -40,6 +41,7 @@ export default function index() {
           renderItem={({item, index}) => <Tag key={index} label={item} />}
         />
       </View>
+      <CenterCard />
     </Container>
   );
 }
