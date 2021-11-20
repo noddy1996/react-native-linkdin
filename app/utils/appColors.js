@@ -3,7 +3,8 @@ export const appColors = {
     secondry: "#0A66C2",
     Text: "#19365F",
     white: "#fff",
-    black: "#000"
+    black: "#000",
+    gray:"gray"
 }
 export const shadow = {
     shadowColor: "#000",

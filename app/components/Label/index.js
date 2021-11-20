@@ -12,6 +12,7 @@ export default function Label({text,style}) {
 const styles = StyleSheet.create({
     label:{
         fontSize:scale(14),
-        color:appColors.black 
+        color:appColors.Text,
+        fontFamily:"FontsFree-Net-Konnect2"
     }
 })
