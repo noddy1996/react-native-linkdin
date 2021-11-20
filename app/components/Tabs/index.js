@@ -38,6 +38,7 @@ export default function index({tabs,inverted, }) {
           paddingHorizontal: scale(20),
         }}
          data={tabs ? tabs: ["Seguidos", "Explorar"]}
+         keyExtractor={(item,index)=>"key"+index}
         renderItem={({item, index}) => (
           <TabCard item={item} key={index} index={index} />
         )}
