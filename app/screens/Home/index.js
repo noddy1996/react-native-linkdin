@@ -32,7 +32,11 @@ export default function Home() {
   return (
     <Container >
      <Stories/>
-     <PostCard/>
+     <PostCard>
+       <View>
+         
+       </View>
+       </PostCard>
     </Container>
   )
 }

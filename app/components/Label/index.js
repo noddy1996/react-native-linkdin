@@ -1,11 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { Platform, PlatformColor, StyleSheet, Text, View } from 'react-native'
 import { scale } from 'react-native-size-matters'
 import { appColors } from '../../utils/appColors'
 
 export default function Label({text,style}) {
     return (
-    <Text  style={[styles.label,style]}>{text}</Text>
+    <Text style={[styles.label, Platform.OS =="android" ? styles.fontFam : {},,style]}>{text}</Text>
     )
 }
 
@@ -13,6 +13,9 @@ const styles = StyleSheet.create({
     label:{
         fontSize:scale(14),
         color:appColors.Text,
-        fontFamily:"FontsFree-Net-Konnect2",
+        
+    },
+    fontFam: {
+        fontFamily:"FontsFree-Net-Konnect2"
     }
 })

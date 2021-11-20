@@ -19,7 +19,9 @@ import {navigationTypeTabs} from './app.json';
 import FontAwesome from 'react-native-vector-icons/dist/FontAwesome'; 
 import MaterialIcons from 'react-native-vector-icons/dist/MaterialIcons'; 
 import AntDesign from 'react-native-vector-icons/dist/AntDesign'; 
+import Ionicons from 'react-native-vector-icons/dist/Ionicons'; 
 FontAwesome.loadFont()
+Ionicons.loadFont()
 AntDesign.loadFont()
 MaterialIcons.loadFont()
 
