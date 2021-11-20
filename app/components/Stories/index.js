@@ -71,6 +71,7 @@ export default function index() {
         ItemSeparatorComponent={() => <View style={{padding: scale(5)}} />}
         horizontal
         data={[1, 2, 3, 4]}
+        keyExtractor={(item,index)=>"key"+index}
         renderItem={renderItem}
       />
     </View>

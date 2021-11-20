@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { StyleSheet, Text, View, ScrollView, } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, FlatList, Image, } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux';
 import { setError } from '../../redux/actions';
 import { } from 'react-native-gesture-handler';
@@ -29,14 +29,26 @@ export default function Home() {
   useEffect(() => {
     setIsError(error)
   }, [error])
+  const _renderItems=()=>{
+    return(
+      <PostCard>
+      <View>
+        <Label text={starterIntro[0]} style={styles.postDescription}/>
+        <Image source={require("../../assets/images/card.png")} style={styles.postImage}/>
+      </View>
+      </PostCard>
+    )
+  }
   return (
     <Container >
-     <Stories/>
-     <PostCard>
-       <View>
-         
-       </View>
-       </PostCard>
+     
+    <FlatList
+    showsVerticalScrollIndicator={false}
+    ListHeaderComponent={()=><Stories/>}
+    data={[1,2,3]}
+    renderItem={_renderItems}
+    keyExtractor={(item,index)=>"key"+index}
+    />
     </Container>
   )
 }
@@ -45,6 +57,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
+  },
+  postImage:{
+    height:scale(150),
+    borderRadius:scale(20),
+    marginVertical:scale(15)
   },
   header: {
     backgroundColor: appColors.primary,
@@ -68,5 +85,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20
   },
-
+postDescription:{
+  marginTop:scale(10)
+}
 });
