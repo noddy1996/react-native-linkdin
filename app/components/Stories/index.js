@@ -30,7 +30,7 @@ export default function index() {
             source={imageDecider(index)}
           />
         </View>
-        <View>
+        <View style={{paddingVertical:scale(10)}}>
           <Label
             text="Amusoftech"
             style={{fontSize: scale(11), color: appColors.Text}}
@@ -50,7 +50,7 @@ export default function index() {
             color={appColors.secondry}
           />
         </View>
-        <View>
+        <View style={{paddingVertical:scale(10)}}>
           <Label
             text="Amusoftech"
             style={{fontSize: scale(11), color: appColors.Text}}
@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: scale(15),
     borderColor: appColors.secondry,
+    
   },
   cardC: {justifyContent: 'center', alignItems: 'center'},
   addStoryC: {
