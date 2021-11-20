@@ -51,5 +51,19 @@ const styles = StyleSheet.create({
     inputStyle:{
         fontSize:scale(12),
 
-    }
+    },
+    badge:{
+        position:"absolute",
+        backgroundColor:appColors.red,
+        height:scale(13),
+        width:scale(13),
+        borderRadius:scale(13/2),
+        justifyContent:"center",
+        alignItems:"center",
+        right:scale(-3)
+    },
+    labelText:{
+        color:appColors.white,
+        fontSize:scale(10)
+    },
 })

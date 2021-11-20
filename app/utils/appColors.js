@@ -4,7 +4,8 @@ export const appColors = {
     Text: "#19365F",
     white: "#fff",
     black: "#000",
-    gray:"gray"
+    gray:"gray",
+    red:"red"
 }
 export const shadow = {
     shadowColor: "#000",
