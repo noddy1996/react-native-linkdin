@@ -5,6 +5,7 @@ import AvatarImage from '../AvatarImage'
 import CustomInput from '../CustomInput'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { appColors } from '../../utils/appColors'
+import Label from '../Label'
 
 export default function CustomHeader({}) {
     return (
@@ -18,9 +19,9 @@ export default function CustomHeader({}) {
             placeholder={"serch anything"}
             />
             <Pressable>
-                <Ionicons name={"chatbubble-ellipses"} color={appColors.gray} size={scale(20)}/>
-                <View>
-                    
+                <Ionicons name={"chatbubble-ellipses"} color={appColors.gray} size={scale(25)}/>
+                <View style={styles.badge}>
+                        <Label text={2}  style={styles.labelText}/>
                 </View>
             </Pressable>
         </View>
@@ -46,5 +47,19 @@ const styles = StyleSheet.create({
     inputStyle:{
         fontSize:scale(12),
 
-    }
+    },
+    badge:{
+        position:"absolute",
+        backgroundColor:appColors.red,
+        height:scale(13),
+        width:scale(13),
+        borderRadius:scale(13/2),
+        justifyContent:"center",
+        alignItems:"center",
+        right:scale(-3)
+    },
+    labelText:{
+        color:appColors.white,
+        fontSize:scale(10)
+    },
 })

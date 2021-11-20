@@ -4,10 +4,10 @@ import { scale } from 'react-native-size-matters'
 import CustomHeader from '../CustomHeader/CustomHeader'
 
 
-export default function Container({children,isScrollable}) {
+export default function Container({children,isScrollable,hideHeader}) {
     return (
         <View style={styles.container}>
-            <CustomHeader/>
+            {!hideHeader&&<CustomHeader/>}
             {
                 isScrollable? <ScrollView>
                     <View style={styles.innerView}>

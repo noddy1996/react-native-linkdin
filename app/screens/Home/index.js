@@ -14,6 +14,8 @@ import Divider from '../../components/Divider';
 import Modal from 'Components/Modal';
 import { scale } from 'react-native-size-matters';
 import Container from '../../components/Container';
+import Stories from '../../components/Stories';
+import PostCard from '../../components/PostCard/PostCard';
 export default function Home() {
   const [isError, setIsError] = useState({})
   const [text, setText] = useState("hello")
@@ -29,7 +31,8 @@ export default function Home() {
   }, [error])
   return (
     <Container >
-      <Label text={"font test"} />
+     <Stories/>
+     <PostCard/>
     </Container>
   )
 }
