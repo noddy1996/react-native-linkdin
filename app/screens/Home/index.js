@@ -44,8 +44,8 @@ export default function Home() {
      
     <FlatList
     showsVerticalScrollIndicator={false}
-    ListHeaderComponent={()=><Stories/>}
-    data={[1,2,3]}
+    ListHeaderComponent={({item,index})=><Stories name={item} />}
+    data={["Fernanda","Aman","Noddy","James"]}
     renderItem={_renderItems}
     keyExtractor={(item,index)=>"key"+index}
     />

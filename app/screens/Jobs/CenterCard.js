@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text,StyleSheet } from 'react-native'
 import { scale } from 'react-native-size-matters'
 import AvatarImage from 'Components/AvatarImage';
 import { appColors } from '../../utils/appColors';
@@ -7,7 +7,7 @@ import Label from 'Components/Label';
 import CustomButton from 'Components/CustomButton';
 export default function CenterCard() {
     return (
-        <View style={{paddingHorizontal:scale(30), backgroundColor:appColors.darkSecondry, justifyContent:'center', alignItems:'center', borderRadius:scale(15)}}>
+        <View style={styles.cont}>
             <View style={{  top:scale(-25)}}>
                 <AvatarImage  style={{borderWidth:scale(2), borderColor:appColors.white}} size={scale(75)}/>
             </View>
@@ -18,3 +18,7 @@ export default function CenterCard() {
         </View>
     )
 }
+
+const styles=StyleSheet.create({
+cont:{paddingHorizontal:scale(30), backgroundColor:appColors.darkSecondry, justifyContent:'center', alignItems:'center', borderRadius:scale(15)}
+})
