@@ -5,7 +5,7 @@ import { appColors } from '../../utils/appColors'
 
 export default function Label({text,style}) {
     return (
-    <Text style={[styles.label, Platform.OS =="android" ? styles.fontFam : {},,style]}>{text}</Text>
+    <Text style={[styles.label, Platform.OS ==="android" ? styles.fontFam : {},style]}>{text}</Text>
     )
 }
 
