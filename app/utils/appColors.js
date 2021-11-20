@@ -10,7 +10,9 @@ export const appColors = {
     red:"red",
     lightGray:"#a1a1a1",
     dividerColor:"#d3d3d3",
-    bgLight:"#F5F7FA"
+    bgLight:"#F5F7FA",
+    seagreen:"#2E8B57"
+
 }
 export const shadow = {
     shadowColor: "#000",
