@@ -48,7 +48,7 @@ export default function Home() {
         <Stories />
         <Label text={"Noticias"}  style={{fontSize:scale(22), fontWeight:"800"}} />
         
-    <Tabs />
+    <Tabs inverted/>
     <Divider  isDark/>
          </>}
         data={[1, 2, 3]}

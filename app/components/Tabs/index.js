@@ -3,7 +3,7 @@ import {View, Text, Pressable, FlatList} from 'react-native';
 import {scale} from 'react-native-size-matters';
 import { appColors } from '../../utils/appColors';
 import Label from 'Components/Label';
-export default function index({tabs}) {
+export default function index({tabs,inverted, }) {
   const [activeIndex, setActiveIndex] = useState(0);
   console.log({activeIndex});
   const isActive = (index)=>{
@@ -31,7 +31,7 @@ export default function index({tabs}) {
     <View >
       <FlatList
         horizontal
-        inverted
+        inverted={inverted}
         contentContainerStyle={{
           flexDirection: 'row',
           justifyContent: 'flex-end',
