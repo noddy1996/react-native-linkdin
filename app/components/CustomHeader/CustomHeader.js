@@ -5,24 +5,28 @@ import AvatarImage from '../AvatarImage'
 import CustomInput from '../CustomInput'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import { appColors } from '../../utils/appColors'
+import Label from '../Label'
 
 export default function CustomHeader({}) {
     return (
         <View style={styles.container}>
+            <View style={{flexDirection:'row'}}>
             <AvatarImage size={scale(35)} source={require("../../assets/images/user-round-2.png")}/>
-            <CustomInput
-            IconLeft={()=>{return(<Ionicons name={"search"} color={appColors.gray} size={scale(20)}/>)}}
-            IconRight={()=>{return(<Ionicons name={"list"} color={appColors.gray} size={scale(20)}/>)}}
-            containerStyle={styles.input}
-            InputStyle={styles.inputStyle}
-            placeholder={"serch anything"}
-            />
+            <View style={{paddingHorizontal:scale(20)}}>
+                <Label  text="Noddy Code"  style={{fontWeight:"800", fontSize:scale(18) }}/>    
+                <Label  text="Frontend developer" style={{fontWeight:"200", fontSize:scale(12), textTransform: 'uppercase' }} />    
+            </View>
+            </View>
+             
+            <View style={{flex:1, flexDirection:'row', justifyContent:'space-evenly'}}>
             <Pressable>
-                <Ionicons name={"chatbubble-ellipses"} color={appColors.gray} size={scale(20)}/>
-                <View>
-                    
-                </View>
+                <Ionicons name={"search"} color={appColors.gray} size={scale(25)}/> 
             </Pressable>
+            <Pressable>
+                <Ionicons name={"chatbubble-ellipses"} color={appColors.gray} size={scale(25)}/> 
+                <View style={{right:scale(-2), backgroundColor:appColors.red , height:scale(13), width:scale(13), position:'absolute', borderRadius:scale(8)}} />
+            </Pressable>
+            </View>
         </View>
     )
 }
@@ -31,6 +35,7 @@ const styles = StyleSheet.create({
     container:{
         flexDirection:"row",
         alignItems:"center",
+        justifyContent:'space-between',
         paddingHorizontal:scale(10),
         marginVertical:scale(5)
         // backgroundColor:"red"
@@ -38,7 +43,7 @@ const styles = StyleSheet.create({
     input:{
         flex:1,
         height:scale(35),
-        backgroundColor:"#e1e1e1",
+        //backgroundColor:"#e1e1e1",
         borderRadius:scale(5),
         paddingHorizontal:scale(10),
         marginHorizontal:scale(10)

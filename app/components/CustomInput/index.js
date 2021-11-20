@@ -12,7 +12,8 @@ export default function CustomInput({
     InputStyle,
     IconRight,
     IconLeft,
-    containerStyle
+    containerStyle,
+    noShadow
 }) {
     return (
         <View style={[styles.container,containerStyle]}>
@@ -23,7 +24,7 @@ export default function CustomInput({
                 onChangeText={onChangeText}
                 secureTextEntry={secureTextEntry}
                 keyboardType={keyboardType}
-                style={[styles.input, InputStyle]}
+                style={[styles.input, InputStyle, noShadow? {}:{...shadow} ]}
             />
             {IconRight && <IconRight/>}
         </View>
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: appColors.white,
         borderRadius:scale(25),
-        ...shadow
+        
     },
     input: {
         flex: 1,
