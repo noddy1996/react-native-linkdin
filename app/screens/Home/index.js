@@ -16,6 +16,7 @@ import { scale } from 'react-native-size-matters';
 import Container from '../../components/Container';
 import Stories from '../../components/Stories';
 import PostCard from '../../components/PostCard/PostCard';
+import FabIcon from '../../components/FabIcon/FabIcon';
 export default function Home() {
   const [isError, setIsError] = useState({})
   const [text, setText] = useState("hello")
@@ -34,7 +35,7 @@ export default function Home() {
       <PostCard>
       <View>
         <Label text={starterIntro[0]} style={styles.postDescription}/>
-        <Image source={require("../../assets/images/card.png")} style={styles.postImage}/>
+        <Image source={require("../../assets/images/card.png")}  style={styles.postImage}/>
       </View>
       </PostCard>
     )
@@ -49,6 +50,7 @@ export default function Home() {
     renderItem={_renderItems}
     keyExtractor={(item,index)=>"key"+index}
     />
+    <FabIcon/>
     </Container>
   )
 }
