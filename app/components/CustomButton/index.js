@@ -14,7 +14,7 @@ export default function index({label,style,onPress,labelStyle}) {
 
 const styles = StyleSheet.create({
     container:{
-        height:scale(50),
+        height:scale(40),
         backgroundColor:appColors.primary,
         borderRadius:scale(30),
         justifyContent:"center",
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         marginVertical:scale(10)
     },
     label:{
-        fontSize:scale(16),
+        fontSize:scale(12),
         fontWeight:"500",
         color:appColors.white
     }

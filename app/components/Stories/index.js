@@ -4,7 +4,7 @@ import {scale} from 'react-native-size-matters';
 import {appColors} from '../../utils/appColors';
 import Label from '../Label';
 import MaterialIcons from 'react-native-vector-icons/dist/MaterialIcons';
-export default function index() {
+export default function index({name}) {
   const imageDecider = (index) => {
     switch (index) {
       case 0:
@@ -30,9 +30,9 @@ export default function index() {
             source={imageDecider(index)}
           />
         </View>
-        <View style={{paddingVertical:scale(10)}}>
+        <View style={{paddingVertical: scale(10)}}>
           <Label
-            text="Amusoftech"
+            text={item}
             style={{fontSize: scale(11), color: appColors.Text}}
           />
         </View>
@@ -50,7 +50,7 @@ export default function index() {
             color={appColors.secondry}
           />
         </View>
-        <View style={{paddingVertical:scale(10)}}>
+        <View style={{paddingVertical: scale(10)}}>
           <Label
             text="Amusoftech"
             style={{fontSize: scale(11), color: appColors.Text}}
@@ -70,8 +70,8 @@ export default function index() {
         showsHorizontalScrollIndicator={false}
         ItemSeparatorComponent={() => <View style={{padding: scale(5)}} />}
         horizontal
-        data={[1, 2, 3, 4]}
-        keyExtractor={(item,index)=>"key"+index}
+        data={['Fernanda', 'Aman', 'Noddy', 'James']}
+        keyExtractor={(item, index) => 'key' + index}
         renderItem={renderItem}
       />
     </View>
@@ -86,7 +86,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderRadius: scale(15),
     borderColor: appColors.secondry,
-    
   },
   cardC: {justifyContent: 'center', alignItems: 'center'},
   addStoryC: {

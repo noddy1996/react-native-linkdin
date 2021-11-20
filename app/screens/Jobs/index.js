@@ -45,7 +45,9 @@ export default function index() {
         />
       </View>
       <RecCard/>
-      <CenterCard />
+      <View style={{marginTop:scale(20)}}>
+        <CenterCard />
+       </View>
       <RecCard/>
     </Container>
   );
